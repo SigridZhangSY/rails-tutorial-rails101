@@ -14,6 +14,7 @@ Rails101::Application.routes.draw do
   end
 
   namespace :account do
+    resources :blogs
     resources :groups
   end
 
@@ -59,7 +60,7 @@ Rails101::Application.routes.draw do
   #   concern :toggleable do
   #     post 'toggle'
   #   end
-  #   resources :posts, concerns: :toggleable
+  #   resources :blogs, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
