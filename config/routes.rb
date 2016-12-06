@@ -6,6 +6,10 @@ Rails101::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :groups do
+    member do
+      post :join
+      post :quit
+    end
     resources :blogs
   end
   # You can have the root of your site routed with "root"
