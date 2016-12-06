@@ -12,6 +12,11 @@ Rails101::Application.routes.draw do
     end
     resources :blogs
   end
+
+  namespace :account do
+    resources :groups
+  end
+
   # You can have the root of your site routed with "root"
   root 'groups#index'
 
