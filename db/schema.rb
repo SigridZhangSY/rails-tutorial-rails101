@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206061802) do
+ActiveRecord::Schema.define(version: 20161206071303) do
 
   create_table "blogs", force: true do |t|
     t.text     "content"
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "group_relationships", force: true do |t|
     t.integer  "group_id"
     t.integer  "user_id"
     t.datetime "created_at"
